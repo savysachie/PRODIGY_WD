@@ -1,0 +1,282 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	height: 100%;
+	font-family: sans-serif;
+}
+
+header {
+	width: 100%;
+	height: 100vh;
+	background: url("travel.jpg");
+	background-size: cover;
+	position: relative;
+}
+
+nav.navbar {
+	width: 100%;
+	height: 100px;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+nav.navbar.scrolled {
+	background-color: rgba(0, 0, 0, 0.9);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+	font-size: 2em;
+	letter-spacing: 2px;
+}
+
+.menu a {
+	text-decoration: none;
+	color: white;
+	padding: 10px 20px;
+	font-size: 20px;
+	position: relative;
+	transition: color 0.4s;
+}
+
+.menu a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	border-bottom: 2px solid indianred;
+	transition: width 0.4s linear;
+}
+
+.menu a:hover::before {
+	width: 90%;
+}
+
+.menu a:hover {
+	color: coral;
+}
+
+.register a {
+	text-decoration: none;
+	color: white;
+	padding: 10px 20px;
+	font-size: 20px;
+	background: indianred;
+	border-radius: 8px;
+	transition: background-color 0.4s, border 0.4s;
+}
+
+.register a:hover {
+	background: transparent;
+	border: 1px solid indianred;
+}
+
+.h-text {
+	max-width: 650px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+}
+
+.h-text span {
+	letter-spacing: 5px;
+}
+
+.h-text h1 {
+	font-size: 3em;
+}
+
+.h-text a {
+	text-decoration: none;
+	background: indianred;
+	color: white;
+	padding: 10px 20px;
+	letter-spacing: 5px;
+	transition: background-color 0.4s, border 0.4s;
+}
+
+.h-text a:hover {
+	background: transparent;
+	border: 1px solid indianred;
+}
+
+main {
+	padding: 50px;
+	background: linear-gradient(
+		to bottom right,
+		rgba(255, 223, 186, 0.8),
+		rgba(186, 255, 201, 0.8)
+	);
+	position: relative;
+}
+
+main::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.5);
+	z-index: -1;
+}
+
+.about-us {
+	background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+	color: #333;
+}
+
+.services {
+	background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+	color: #333;
+}
+
+.testimonials {
+	background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+	color: #333;
+}
+
+.contact-us {
+	background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+	color: #333;
+}
+
+.content {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 50px;
+}
+
+.content h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.content p {
+	margin-bottom: 20px;
+	line-height: 1.6;
+}
+
+.image-gallery {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.image-gallery img {
+	width: 32%;
+	border-radius: 8px;
+}
+
+.about-us,
+.services,
+.testimonials,
+.contact-us {
+	margin: 50px auto;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2,
+.services h2,
+.testimonials h2,
+.contact-us h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.about-us p,
+.services p,
+.testimonials p,
+.contact-us p {
+	margin-bottom: 20px;
+	line-height: 1.6;
+}
+
+.about-us img {
+	width: 100%;
+	border-radius: 8px;
+}
+
+.service-cards {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.service-cards .card {
+	width: 32%;
+	padding: 20px;
+	background: rgba(250, 250, 250, 0.9);
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-cards .card h3 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+.service-cards .card p {
+	line-height: 1.6;
+}
+
+.testimonials-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.testimonial {
+	padding: 20px;
+	background: rgba(249, 249, 249, 0.9);
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.testimonial cite {
+	font-size: 1em;
+	color: #555;
+}
+
+.contact-us a {
+	display: inline-block;
+	text-decoration: none;
+	background: indianred;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 8px;
+	transition: background-color 0.4s, border 0.4s;
+}
+
+.contact-us a:hover {
+	background: transparent;
+	border: 1px solid indianred;
+}
